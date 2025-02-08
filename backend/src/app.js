@@ -1,6 +1,7 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express";
 import {createServer} from "node:http";
-
 import {Server} from "socket.io";
 
 import mongoose from "mongoose";
@@ -23,7 +24,7 @@ app.use("/api/v1/users",userRoutes);
 
 
 const start=async ()=>{
-    const connnectionDb=await mongoose.connect("mongodb+srv://apoorvt2004:yash_meetify@cluster0.lt0al.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    const connnectionDb=await mongoose.connect(process.env.MONGO_URL);
      console.log(`MONGO Connected DB Host: ${connnectionDb.connection.host}`);
      server.listen(app.get("port"),()=>{
         console.log("LISTENING ON PORT 8000 ");
