@@ -56,6 +56,8 @@ This is a full-stack video conferencing web application built using the MERN sta
 ## Contributing
 Contributions are welcome! Feel free to fork this repository and submit pull requests.
 
+Made with ❤️ by **Apoorv Tiwari**
+
 
 
 
